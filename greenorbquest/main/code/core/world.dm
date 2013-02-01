@@ -6,6 +6,8 @@
 	Sound effects generated using DrPetter's sfxr tool.
 	sfxr (http://www.drpetter.se/project_sfxr.html)
 
+	Music by FoxSynergy (http://opengameart.org/content/grey-sector-8-bit)
+
 	Programming and artwork, unless otherwise noted is mine (Robert "Lordovos" Holman's).
 */
 world
@@ -13,7 +15,7 @@ world
 
 	hub = "LordAndrew.GreenOrbQuest"
 
-	version = 2
+	version = 3
 
 	icon_size = 16
 

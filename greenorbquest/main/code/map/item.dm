@@ -61,7 +61,7 @@ obj
 
 					player.updateOrbCounter()
 
-					player << sound('get-orb.wav', volume = 50)
+					player << sound('get-orb.wav', volume = 25)
 
 //					player << 'get-orb.wav'
 

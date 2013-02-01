@@ -83,17 +83,17 @@ menu "menu"
 		command = ".resize 1"
 		category = "&Window"
 		is-checked = false
-		can-check = true
-		group = "screen-size"
+		can-check = false
+		group = ""
 		is-disabled = false
 		saved-params = "is-checked"
 	elem 
 		name = "Resize x&2"
 		command = ".resize 2"
 		category = "&Window"
-		is-checked = true
-		can-check = true
-		group = "screen-size"
+		is-checked = false
+		can-check = false
+		group = ""
 		is-disabled = false
 		saved-params = "is-checked"
 	elem 
@@ -101,8 +101,8 @@ menu "menu"
 		command = ".resize 3"
 		category = "&Window"
 		is-checked = false
-		can-check = true
-		group = "screen-size"
+		can-check = false
+		group = ""
 		is-disabled = false
 		saved-params = "is-checked"
 

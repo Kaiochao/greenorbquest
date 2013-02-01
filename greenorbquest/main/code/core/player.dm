@@ -154,6 +154,8 @@ mob
 
 			initializeOrbCounter()
 
+			src << 'Grey Sector v0_85.ogg'
+
 		Move(newLoc)
 			var/d = get_dir(loc, newLoc)
 
