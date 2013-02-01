@@ -1,0 +1,29 @@
+// BEGIN_INTERNALS
+// END_INTERNALS
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+#define FILE_DIR "hub"
+#define FILE_DIR "main"
+#define FILE_DIR "main/resources"
+#define FILE_DIR "main/resources/icon"
+#define FILE_DIR "main/resources/sound"
+// END_FILE_DIR
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+// BEGIN_INCLUDE
+#include "main\interface.dmf"
+#include "main\map.dmm"
+#include "main\code\core\client.dm"
+#include "main\code\core\Game.dm"
+#include "main\code\core\globals.dm"
+#include "main\code\core\player.dm"
+#include "main\code\core\smooth-tile-movement.dm"
+#include "main\code\core\temporary.dm"
+#include "main\code\core\world.dm"
+#include "main\code\map\door.dm"
+#include "main\code\map\hud.dm"
+#include "main\code\map\item.dm"
+#include "main\code\map\map.dm"
+#include "main\code\map\tileset.dm"
+#include "main\code\map\trap.dm"
+// END_INCLUDE
