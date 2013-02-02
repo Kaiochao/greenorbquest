@@ -1,6 +1,7 @@
 /*
 	Smooth Tile Movement (http://www.byond.com/developer/FIREking/SmoothTileMovement)
 	by FIREking (http://www.byond.com/members/fireking)
+	Modified by Kaiochaio (http://www.byond.com/members/kaiochao)
 */
 proc/get_speed_delay(n)
 	if(n != 0)
@@ -26,11 +27,11 @@ atom/movable
 
 		if(transferring) return 0
 
-		src.move_time = world.time + get_speed_delay(src.speed)
-
 		. = ..()
 
 		if(.)
+			src.move_time = world.time + get_speed_delay(src.speed)
+
 			src.glide_size = get_glide_size(src.speed)
 
 	proc/Transfer(atom/location)

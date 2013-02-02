@@ -60,8 +60,6 @@ mob
 
 				client.clearScreen("CLEAR_ALL")
 
-//				client.screen -= orbCounters
-
 				client.showHUD("win")
 
 				getDeathCount()
