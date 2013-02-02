@@ -15,7 +15,7 @@ world
 
 	hub = "LordAndrew.GreenOrbQuest"
 
-	version = 3
+	version = 4
 
 	icon_size = 16
 
