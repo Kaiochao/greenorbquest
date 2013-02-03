@@ -26,4 +26,7 @@
 #include "main\code\map\map.dm"
 #include "main\code\map\tileset.dm"
 #include "main\code\map\trap.dm"
+#include "main\code\map\trap\blade.dm"
+#include "main\code\map\trap\spear.dm"
+#include "main\code\map\trap\spike.dm"
 // END_INCLUDE

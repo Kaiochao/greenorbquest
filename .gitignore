@@ -1,9 +1,11 @@
-#################
-## Dream Maker
-#################
+# Dream Maker
 
 *.dmb
 *.rsc
 *.int
 *.lk
 *.zip
+
+# Project specific files
+
+Grey Sector v0_85.ogg

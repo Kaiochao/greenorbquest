@@ -21,7 +21,9 @@ obj
 
 					player.updateInventory()
 
-					del src
+//					del src
+
+					loc = null
 
 				else
 					player.die()

@@ -9,6 +9,12 @@ turf
 
 		density = TRUE
 
+	pit
+		icon_state = "pit"
+
+	water
+		icon_state = "water"
+
 	checkpoint
 		icon_state = "checkpoint"
 
@@ -52,9 +58,3 @@ turf
 
 			else
 				player.win()
-
-	pit
-		icon_state = "pit"
-
-	water
-		icon_state = "water"
