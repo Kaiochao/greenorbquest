@@ -21,8 +21,6 @@ obj
 
 					player.updateInventory()
 
-//					del src
-
 					loc = null
 
 				else

@@ -4,4 +4,4 @@ mob
 			client.showHUD("title", "begin", "help-button", "credits-button")
 
 		Logout()
-			del src
+			loc = null

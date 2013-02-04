@@ -63,8 +63,6 @@ obj
 
 					player << sound('get-orb.wav', volume = 25)
 
-//					del src
-
 					loc = null
 
 		orb_red
