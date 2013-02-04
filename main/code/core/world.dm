@@ -38,8 +38,8 @@ world
 		huds["credits-button"] = new /obj/hud/button/credits
 		huds["inventory"] = new /obj/hud/inventory
 		huds["win"] = new /obj/hud/slide/win
-		huds["orb-sprite"] = new /obj/hud/text/orb
-		huds["counter-separator"] = new /obj/hud/text/separator
 
 	OpenPort()
 		return 0
+
+#define DEBUG

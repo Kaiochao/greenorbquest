@@ -24,6 +24,7 @@
 #include "main\code\map\hud.dm"
 #include "main\code\map\item.dm"
 #include "main\code\map\map.dm"
+#include "main\code\map\text.dm"
 #include "main\code\map\tileset.dm"
 #include "main\code\map\trap\blade.dm"
 #include "main\code\map\trap\hole.dm"

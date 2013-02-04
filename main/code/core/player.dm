@@ -14,16 +14,6 @@ mob
 			orbTotal = 0
 			deathCount = 0
 
-			obj/hud/text
-				hundredsCount
-				tensCount
-				onesCount
-				hundredsTotal
-				tensTotal
-				onesTotal
-
-			list/orbCounters
-
 			turf/checkpoint/checkpoint
 
 		proc
@@ -59,55 +49,26 @@ mob
 			win()
 				canMove = FALSE
 
-				client.clearScreen("CLEAR_ALL")
+				client.hideHUD("inventory")
+
+				client.clearText("current-orb-count")
+				client.clearText("total-orb-count")
 
 				client.showHUD("win")
 
-				getDeathCount()
+				client.drawText("you died this many times: " + num2text(deathCount), 1, 1, 24, 32, "death-count")
 
 			updateInventory()
 				for(var/obj/item/item in client.screen)
 					item.updateScreenLoc(src)
 
-			// Everything about this is awful but I am on a time limit.
 			initializeOrbCounter()
-				hundredsCount = new
-				tensCount = new
-				onesCount = new
-				hundredsTotal = new
-				tensTotal = new
-				onesTotal = new
-				orbCounters = list(hundredsCount, tensCount, onesCount, hundredsTotal, tensTotal, onesTotal)
-
-				var/i = 0
-
-				for(var/obj/hud/text/text in orbCounters)
-					text.icon_state = "0"
-
-					var/offset = (i >= 3 ? ((i * 8) + 8) : (i * 8))
-
-					text.screen_loc = "1:[216 + offset], 1:4"
-
-					i++
-
-				var/count = num2text(game.orbTotal)
-
-				if(length(count) == 2)
-					count = "0" + count
-
-				else if(length(count) == 1)
-					count = "00" + count
-
-				hundredsTotal.icon_state = copytext(count, 1, 2)
-				tensTotal.icon_state = copytext(count, 2, 3)
-				onesTotal.icon_state = copytext(count, 3, 4)
-
-				client.screen += orbCounters
+				client.drawText("*   /" + num2text(game.orbTotal), 1, 1, 208, 0, "total-orb-count")
 
 				updateOrbCounter()
 
 			updateOrbCounter()
-				if(orbCount >= 999) return
+				client.clearText("current-orb-count")
 
 				var/count = num2text(orbCount)
 
@@ -117,20 +78,7 @@ mob
 				else if(length(count) == 1)
 					count = "00" + count
 
-				hundredsCount.icon_state = copytext(count, 1, 2)
-				tensCount.icon_state = copytext(count, 2, 3)
-				onesCount.icon_state = copytext(count, 3, 4)
-
-			getDeathCount()
-				var/count = num2text(deathCount)
-
-				for(var/i = 0; i <= length(count); i++)
-					var/obj/hud/text/text = new
-
-					text.icon_state = copytext(count, i, i + 1)
-					text.screen_loc = "1:[166 + (i * 8)], 1:8"
-
-					client.screen += text
+				client.drawText(count, 1, 1, 216, 0, "current-orb-count")
 
 		Login()
 			// Manually set the first checkpoint so that it won't play a sound effect.
@@ -149,11 +97,9 @@ mob
 
 			game.player = src
 
-			client.showHUD("inventory", "orb-sprite", "counter-separator")
+			client.showHUD("inventory")
 
 			initializeOrbCounter()
-
-//			src << 'Grey Sector v0_85.ogg'
 
 		Move(newLoc)
 			var/d = get_dir(loc, newLoc)

@@ -10,3 +10,5 @@ var
 	Game/game
 
 	list/huds
+
+	const/CHAR_WIDTH = 8
