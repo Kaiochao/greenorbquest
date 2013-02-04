@@ -1,5 +1,6 @@
 obj
 	door
+		icon = 'tileset.dmi'
 		icon_state = "door"
 
 		density = TRUE

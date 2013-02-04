@@ -42,4 +42,4 @@ world
 		huds["counter-separator"] = new /obj/hud/text/separator
 
 	OpenPort()
-		return
+		return 0

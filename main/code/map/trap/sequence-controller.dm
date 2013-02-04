@@ -33,7 +33,7 @@ obj
 
 						trap = locate() in t
 
-						if(t)
+						if(trap)
 							traps += trap
 
 							trap.setController(src)
