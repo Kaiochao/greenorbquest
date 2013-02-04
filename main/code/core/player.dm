@@ -14,6 +14,9 @@ mob
 			orbTotal = 0
 			deathCount = 0
 
+			startTime = 0
+			endTime = 0
+
 			turf/checkpoint/checkpoint
 
 		proc
@@ -49,6 +52,8 @@ mob
 			win()
 				canMove = FALSE
 
+				endTime = world.timeofday
+
 				client.hideHUD("inventory")
 
 				client.clearText("current-orb-count")
@@ -56,7 +61,8 @@ mob
 
 				client.showHUD("win")
 
-				client.drawText("you died this many times: " + num2text(deathCount), 1, 1, 24, 32, "death-count")
+				client.drawText(" clear time: " + time2text((endTime - startTime), "mm:ss"), 1, 1, 16, 32)
+				client.drawText("death count: " + num2text(deathCount), 1, 1, 16, 22, "death-count")
 
 			updateInventory()
 				for(var/obj/item/item in client.screen)
@@ -100,6 +106,8 @@ mob
 			client.showHUD("inventory")
 
 			initializeOrbCounter()
+
+			startTime = world.timeofday
 
 		Move(newLoc)
 			var/d = get_dir(loc, newLoc)
