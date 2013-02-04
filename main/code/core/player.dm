@@ -28,22 +28,23 @@ mob
 
 		proc
 			die()
-				if(isDead) return
+				spawn(1)
+					if(isDead) return
 
-				isDead = TRUE
-				canMove = FALSE
+					isDead = TRUE
+					canMove = FALSE
 
-				deathCount++
+					deathCount++
 
-				flick("die", src)
+					flick("die", src)
 
-				icon_state = "dead"
+					icon_state = "dead"
 
-				src << 'die.wav'
+					src << 'die.wav'
 
-				sleep(10)
+					sleep(10)
 
-				respawn()
+					respawn()
 
 			respawn()
 				if(!isDead) return

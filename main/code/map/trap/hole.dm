@@ -13,8 +13,7 @@ obj
 				isActive = TRUE
 
 				for(var/mob/player/player in loc)
-					spawn(1)
-						player.die()
+					player.die()
 
 			deactivate()
 				if(!isActive) return
