@@ -25,8 +25,11 @@
 #include "main\code\map\item.dm"
 #include "main\code\map\map.dm"
 #include "main\code\map\tileset.dm"
-#include "main\code\map\trap.dm"
 #include "main\code\map\trap\blade.dm"
+#include "main\code\map\trap\hole.dm"
+#include "main\code\map\trap\sequence-controller.dm"
+#include "main\code\map\trap\sequences.dm"
 #include "main\code\map\trap\spear.dm"
 #include "main\code\map\trap\spike.dm"
+#include "main\code\map\trap\trap.dm"
 // END_INCLUDE

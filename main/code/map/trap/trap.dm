@@ -1,7 +1,7 @@
 obj
-	icon = 'tileset.dmi'
-
 	trap
+		icon = 'tileset.dmi'
+
 		var
 			isActive = FALSE
 
@@ -15,3 +15,5 @@ obj
 			activate()
 
 			deactivate()
+
+			setController(obj/sequence_controller/sequenceController)

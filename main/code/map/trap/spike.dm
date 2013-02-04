@@ -17,6 +17,8 @@ obj
 					sleep(delayOff)
 
 			activate()
+				if(isActive) return
+
 				flick("spike-activating", src)
 
 				icon_state = "spike-on"
@@ -28,6 +30,8 @@ obj
 						player.die()
 
 			deactivate()
+				if(!isActive) return
+
 				flick("spike-deactivating", src)
 
 				icon_state = initial(icon_state)

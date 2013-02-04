@@ -1,32 +1,34 @@
 obj
 	trap
-		spear
-			icon_state = "spear-off"
+		hole
+			icon_state = "hole-off"
 
 			activate()
 				if(isActive) return
 
-				flick("spear-activating", src)
+				flick("hole-activating", src)
 
-				icon_state = "spear-on"
+				icon_state = "hole-on"
 
 				isActive = TRUE
+
+				for(var/mob/player/player in loc)
+					spawn(1)
+						player.die()
 
 			deactivate()
 				if(!isActive) return
 
-				flick("spear-deactivating", src)
+				flick("hole-deactivating", src)
 
 				icon_state = initial(icon_state)
 
 				isActive = FALSE
 
 			Crossed(atom/movable/ref)
+				if(!isActive) return
+
 				if(ismob(ref))
 					var/mob/player/player = ref
 
-					activate()
-
 					player.die()
-
-					deactivate()
