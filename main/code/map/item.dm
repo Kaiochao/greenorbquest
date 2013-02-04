@@ -16,7 +16,7 @@ obj
 			updateScreenLoc(mob/player/player)
 				screen_loc = "[player.contents.Find(src)], 1"
 
-		SteppedOn(atom/movable/ref)
+		Crossed(atom/movable/ref)
 			if(ismob(ref))
 				var/mob/player/player = ref
 
@@ -52,7 +52,7 @@ obj
 
 			desc = "A mystical green orb that resonates with an unknown power."
 
-			SteppedOn(atom/movable/ref)
+			Crossed(atom/movable/ref)
 				if(ismob(ref))
 					var/mob/player/player = ref
 

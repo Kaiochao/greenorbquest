@@ -17,7 +17,7 @@ obj
 
 				isActive = FALSE
 
-			SteppedOn(atom/movable/ref)
+			Crossed(atom/movable/ref)
 				if(ismob(ref))
 					var/mob/player/player = ref
 

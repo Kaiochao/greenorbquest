@@ -34,7 +34,7 @@ obj
 
 				isActive = FALSE
 
-			SteppedOn(atom/movable/ref)
+			Crossed(atom/movable/ref)
 				if(!isActive) return
 
 				if(ismob(ref))

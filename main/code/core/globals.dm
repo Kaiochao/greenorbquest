@@ -5,7 +5,7 @@ atom
 	movable
 		Bump(atom/obstacle)
 			obstacle.Bumped(src)
-
+/*
 		proc
 			SteppedOn(atom/movable/ref)
 
@@ -19,7 +19,7 @@ turf
 			if(o == ref) continue
 
 			o.SteppedOn(ref)
-
+*/
 var
 	Game/game
 

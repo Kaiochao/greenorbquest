@@ -152,7 +152,7 @@ mob
 
 			initializeOrbCounter()
 
-			src << 'Grey Sector v0_85.ogg'
+//			src << 'Grey Sector v0_85.ogg'
 
 		Move(newLoc)
 			var/d = get_dir(loc, newLoc)
@@ -163,6 +163,6 @@ mob
 
 			return ..()
 
-		SteppedOn(atom/movable/ref)
+		Crossed(atom/movable/ref)
 			if(istype(ref, /obj/trap/blade))
 				die()
