@@ -101,6 +101,8 @@ obj
 					usr.client.drawText("    drpetter's sfxr", 1, 1, 0, 112, "credits")
 					usr.client.drawText("developed using byond and the", 1, 1, 0, 92, "credits")
 					usr.client.drawText("    dm language", 1, 1, 0, 82, "credits")
+					usr.client.drawText("special thanks to", 1, 1, 0, 62, "credits")
+					usr.client.drawText("    darkcampainger", 1, 1, 0, 52, "credits")
 					usr.client.drawText("<back", 1, 1, 0, 0, "credits")
 
 					usr.client.hideHUD("title", "begin", "help-button", "credits-button")

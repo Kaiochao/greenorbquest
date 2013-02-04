@@ -1,5 +1,5 @@
 client
-//	control_freak = CONTROL_FREAK_ALL
+	control_freak = CONTROL_FREAK_ALL
 
 	pixel_y = -8
 
