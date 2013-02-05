@@ -28,6 +28,7 @@
 #include "main\code\map\tileset.dm"
 #include "main\code\map\trap\blade.dm"
 #include "main\code\map\trap\hole.dm"
+#include "main\code\map\trap\pressure plate.dm"
 #include "main\code\map\trap\sequence-controller.dm"
 #include "main\code\map\trap\sequences.dm"
 #include "main\code\map\trap\spear.dm"
